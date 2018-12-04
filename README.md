@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Welcome to go-fronted-go
 
 You can use the [editor on GitHub](https://github.com/kimyyx/go-frontend-go/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
