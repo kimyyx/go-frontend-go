@@ -1,37 +1,16 @@
-## Welcome to go-fronted-go
+## About Project
 
-You can use the [editor on GitHub](https://github.com/kimyyx/go-frontend-go/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+说是项目，其实也就是一个分享前端内容的博客，大概会有如下四个主题
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+- 资讯，前端最近变化是真快
+- [技术，写解决问题的技术](/blog.html)
+- 面试，现在已经不太出去面试了，不过会搜集面试的资料
+- 算法，这块是我正在学习的，就当分享学习心得吧
 
-### Markdown
+常说“好记性不如烂笔头”，开始是不信的。但随着工作的时间增长，接触的东西越来越多，才体会到记忆是靠不住的，或者说记忆是粗糙的，例如：这个A问题我之前碰到过，但我忘了解决步骤了，记忆中似乎可以用B技术解决。
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+很伤，是不是？
 
-```markdown
-Syntax highlighted code block
+## About Me
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/kimyyx/go-frontend-go/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Kim，87年，小城市里的，小公司中的，一枚小小的前端码农。不敢与发明车轮的大牛一比，只求不被时代的车轮碾压。

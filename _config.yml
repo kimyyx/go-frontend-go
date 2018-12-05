@@ -1,1 +1,8 @@
+repository: kimyyx/go-frontend-go
 theme: jekyll-theme-cayman
+title: Go frontend Go
+description: 资讯 & 知识点 & 面试题 for 前端
+github:
+  is_project_page: true
+  repository_name: Go frontend Go
+  repository_url: https://github.com/kimyyx/go-frontend-go
