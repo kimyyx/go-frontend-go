@@ -1,3 +1,5 @@
+plugins:
+  - jemoji
 repository: kimyyx/go-frontend-go
 theme: jekyll-theme-cayman
 title: Go frontend Go
