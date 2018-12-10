@@ -1,13 +1,16 @@
 ---
 layout: list
 ---
-<h1>Latest Posts</h1>
-
+{% for category in site.categories %}
+{% if category[0] == "环境搭建" %}
+<h1>{{ category[0] }}</h1>
 <ul>
-  {% for post in site.posts %}
+  {% for post in category[1] %}
   <li>
     <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
     <p>{{ post.excerpt }}</p>
   </li>
   {% endfor %}
 </ul>
+{% endif %}
+{% endfor %}
