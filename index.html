@@ -1,0 +1,21 @@
+---
+layout: default
+author: Kim
+---
+
+{% for category in site.categories %}
+<h3>
+  {{ category[0] }}
+  <a href="#" class="link"
+    >{% for post in category[1] %} [{{ forloop.length }}] {% if forloop.first %}
+    {% break %} {% endif %} {% endfor %}</a
+  >
+</h3>
+<ul>
+  {% for post in category[1] limit:5 %}
+  <li>
+    <a href="{{ post.url }}">{{ post.title }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endfor %}

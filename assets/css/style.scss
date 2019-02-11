@@ -1,4 +1,10 @@
 ---
 ---
 
-@import "{{ site.theme }}";
+@import '{{ site.theme }}';
+
+.link {
+  color: #159957;
+  text-decoration: underline;
+  letter-spacing: 0.1rem;
+}
