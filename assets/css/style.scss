@@ -3,8 +3,75 @@
 
 @import '{{ site.theme }}';
 
-.link {
+.text-center {
+  text-align: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-start-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.page-header {
+  padding: 3rem;
+}
+
+.project-tagline {
+  margin: 15px auto;
+}
+
+.main-content {
+  width: 960px;
+}
+
+#more {
+  display: inline-block;
+  margin-top: 3rem;
   color: #159957;
-  text-decoration: underline;
-  letter-spacing: 0.1rem;
+}
+
+.list-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.list > li {
+  margin-bottom: 3rem;
+}
+
+.list > li a {
+  color: #159957;
+}
+
+.list > li > p {
+  font-size: 14px;
+}
+
+.list > li .post-info img {
+  width: 14px;
+  height: 14px;
+}
+.list > li .post-info span {
+  margin-left: 6px;
+  color: #999;
+  font-size: 14px;
+}
+
+.category-container > span {
+  padding: 5px 10px;
+  margin-right: 10px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 12px;
+  background-color: #1e6bb8;
 }

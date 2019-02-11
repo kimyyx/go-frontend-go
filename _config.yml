@@ -1,5 +1,6 @@
 plugins:
   - jemoji
+  - jekyll-paginate
 repository: kimyyx/go-frontend-go
 theme: jekyll-theme-cayman
 title: Go frontend Go
@@ -9,3 +10,8 @@ github:
   repository_name: Go frontend Go
   repository_url: https://github.com/kimyyx/go-frontend-go
 google_analytics: UA-130710568-1
+
+# excerpt_separator: <!--more-->
+
+paginate: 10
+paginate_path: /blog/page:num/

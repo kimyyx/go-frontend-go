@@ -6,9 +6,9 @@ author: Kim
 {% for category in site.categories %}
 <h3>
   {{ category[0] }}
-  <a href="#" class="link"
+  <span
     >{% for post in category[1] %} [{{ forloop.length }}] {% if forloop.first %}
-    {% break %} {% endif %} {% endfor %}</a
+    {% break %} {% endif %} {% endfor %}</span
   >
 </h3>
 <ul>
@@ -19,3 +19,5 @@ author: Kim
   {% endfor %}
 </ul>
 {% endfor %}
+
+<a id="more" href="/blog/index.html">查看所有文章 >></a>
