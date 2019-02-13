@@ -3,6 +3,10 @@
 
 @import '{{ site.theme }}';
 
+:root {
+  --white: #fff;
+}
+
 .text-center {
   text-align: center;
 }
@@ -60,7 +64,7 @@
   padding: 1rem;
   border: 1px solid #ccc;
   border-radius: 8px;
-  background-color: #fff;
+  background-color: var(--white);
 }
 
 #more {
