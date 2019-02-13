@@ -25,14 +25,16 @@ author: Kim
 <div id="file-list">
   <h4>文章存档</h4>
   <ul>
-    {% for post in site.posts %} {% assign year = post.date | date: '%Y' %} {%
-    assign month = post.date | date: '%m' %}{% assign nyear = post.next.date |
-    date: '%Y' %} {% if year != nyear %}
+    {% assign count = 1 %} {% for post in site.posts %} {% assign year =
+    post.date | date: '%Y' %} {% assign month = post.date | date: '%m' %} {%
+    assign nyear = post.previous.date | date: '%Y' %} {% assign nmonth =
+    post.previous.date | date: '%m' %} {% if year != nyear or month != nmonth %}
     <li>
       <a href="/file/{{ year }}/{{ month }}/index.html"
-        >{{ year }} 年 {{ month }} 月</a
+        >{{ year }} 年 {{ month }} 月（{{ count }}）</a
       >
+      {% assign count = 1 %}
     </li>
-    {% endif%} {% endfor %}
+    {% else %} {% assign count = count | plus: 1 %} {% endif%} {% endfor %}
   </ul>
 </div>
