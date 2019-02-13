@@ -1,7 +1,7 @@
 ---
 ---
 
-@import "{{ site.theme }}";
+@import '{{ site.theme }}';
 
 .text-center {
   text-align: center;
@@ -31,6 +31,17 @@
 
 .main-content {
   width: 960px;
+}
+
+#home {
+  position: relative;
+  padding: 2rem 0;
+  padding-left: 200px;
+}
+
+#ads-vultr {
+  position: absolute;
+  left: 0;
 }
 
 #more {
