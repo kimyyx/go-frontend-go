@@ -3,6 +3,7 @@ layout: default
 author: Kim
 ---
 
+<h2>最新文章</h2>
 {% for category in site.categories %}
 <h3>
   {{ category[0] }}
@@ -21,20 +22,3 @@ author: Kim
 {% endfor %}
 
 <a id="more" href="/blog/index.html">查看所有文章 >></a>
-
-<div id="file-list">
-  <h4>文章存档</h4>
-  <ul>
-    {% assign count = 1 %} {% for post in site.posts %} {% assign year =
-    post.date | date: '%Y' %} {% assign month = post.date | date: '%m' %} {%
-    assign nyear = post.previous.date | date: '%Y' %} {% assign nmonth =
-    post.previous.date | date: '%m' %} {% if year != nyear or month != nmonth %}
-    <li>
-      <a href="/file/{{ year }}/{{ month }}/index.html"
-        >{{ year }} 年 {{ month }} 月（{{ count }}）</a
-      >
-      {% assign count = 1 %}
-    </li>
-    {% else %} {% assign count = count | plus: 1 %} {% endif%} {% endfor %}
-  </ul>
-</div>

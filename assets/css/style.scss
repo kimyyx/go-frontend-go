@@ -7,6 +7,10 @@
   text-align: center;
 }
 
+.flex {
+  display: flex;
+}
+
 .flex-column {
   display: flex;
   flex-direction: column;
@@ -22,7 +26,7 @@
 }
 
 .page-header {
-  padding: 3rem;
+  padding: 2rem;
 }
 
 .project-tagline {
@@ -33,15 +37,30 @@
   width: 960px;
 }
 
+.site-footer {
+  width: 960px;
+  padding: 1rem 0;
+  margin: 0 auto;
+  border-color: #ccc;
+  text-align: right;
+}
+
 #home {
   position: relative;
   padding: 2rem 0;
-  padding-left: 200px;
+  padding-left: calc(120px + 2rem);
 }
 
 #ads-vultr {
   position: absolute;
   left: 0;
+}
+
+#home > section {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
 }
 
 #more {
@@ -51,13 +70,13 @@
 }
 
 #file-list {
-  position: absolute;
-  top: 32px;
-  right: 0;
-  width: 240px;
-  padding: 20px;
+  align-self: flex-start;
+  // width: 240px;
+  padding: 1rem;
   border: 1px solid #ccc;
   border-radius: 8px;
+  margin-left: 2rem;
+  background-color: #fff;
 }
 
 .list-page {
