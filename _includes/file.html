@@ -1,0 +1,6 @@
+<h1>{{ page.year }}年{{ page.month }}月 存档文章列表</h1>
+<ul class="list">
+  {% for post in site.posts %} {% assign y = post.date | date: '%Y' %} {% assign
+  m = post.date | date: '%m' %} {% if y == page.year and m == page.month %} {%
+  include blog.html %} {% endif %} {% endfor %}
+</ul>

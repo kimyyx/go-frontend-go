@@ -1,7 +1,7 @@
 ---
 ---
 
-@import '{{ site.theme }}';
+@import "{{ site.theme }}";
 
 .text-center {
   text-align: center;
@@ -37,6 +37,16 @@
   display: inline-block;
   margin-top: 3rem;
   color: #159957;
+}
+
+#file-list {
+  position: absolute;
+  top: 32px;
+  right: 0;
+  width: 240px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
 }
 
 .list-page {

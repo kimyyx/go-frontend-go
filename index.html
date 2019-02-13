@@ -21,3 +21,18 @@ author: Kim
 {% endfor %}
 
 <a id="more" href="/blog/index.html">查看所有文章 >></a>
+
+<div id="file-list">
+  <h4>文章存档</h4>
+  <ul>
+    {% for post in site.posts %} {% assign year = post.date | date: '%Y' %} {%
+    assign month = post.date | date: '%m' %}{% assign nyear = post.next.date |
+    date: '%Y' %} {% if year != nyear %}
+    <li>
+      <a href="/file/{{ year }}/{{ month }}/index.html"
+        >{{ year }} 年 {{ month }} 月</a
+      >
+    </li>
+    {% endif%} {% endfor %}
+  </ul>
+</div>

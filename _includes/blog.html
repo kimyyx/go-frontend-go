@@ -1,0 +1,17 @@
+<li>
+  <h3>
+    <a href="{{ post.url }}">{{ post.title }}</a>
+  </h3>
+  <div class="category-container">
+    {% for category in post.categories %}
+    <span>{{ category }}</span>
+    {% endfor %} {% for tag in post.tags %}
+    <span>{{ tag }}</span>
+    {% endfor %}
+  </div>
+  <p>{{ post.excerpt }}</p>
+  <div class="post-info flex-start-center">
+    :clock9:
+    <span>{{ post.date | date: "%Y年%m月%d日" }}</span>
+  </div>
+</li>
