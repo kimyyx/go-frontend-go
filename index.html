@@ -4,7 +4,7 @@ author: Kim
 ---
 
 <h2>最新文章</h2>
-{% for category in site.tags %}
+{% for category in site.tags reversed %}
 <h3>
   {{ category[0] }}
   <span
