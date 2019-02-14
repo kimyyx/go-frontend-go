@@ -63,4 +63,5 @@ typings/
 _drafts/
 _site/
 .sass-cache
+.prettierignore
 Gemfile.lock
