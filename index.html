@@ -1,24 +1,8 @@
 ---
 layout: default
-author: Kim
 ---
 
-<h2>最新文章</h2>
-{% for category in site.tags reversed %}
-<h3>
-  {{ category[0] }}
-  <span
-    >{% for post in category[1] %} [{{ forloop.length }}] {% if forloop.first %}
-    {% break %} {% endif %} {% endfor %}</span
-  >
-</h3>
-<ul>
-  {% for post in category[1] limit:5 %}
-  <li>
-    <a href="{{ post.url }}">{{ post.title }}</a>
-  </li>
-  {% endfor %}
+<ul style="text-align: left;">
+  {% for post in site.posts limit:10 %} {% include blog_list.html %} {% endfor
+  %}
 </ul>
-{% endfor %}
-
-<a id="more" href="/blog/index.html">查看所有文章 >></a>
