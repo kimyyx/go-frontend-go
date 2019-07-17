@@ -2,9 +2,9 @@ plugins:
   - jemoji
   - jekyll-paginate
 repository: kimyyx/go-frontend-go
-theme: jekyll-theme-cayman
-title: Go frontend Go
-description: 资讯 & 知识点 & 面试题 for 前端
+theme: jekyll-theme-hacker
+title: 歪歪叉的博客
+description: 梦想是诗酒和远方，苟且是键盘和代码，还有那看不完的书
 github:
   is_project_page: false
   repository_name: Go frontend Go
