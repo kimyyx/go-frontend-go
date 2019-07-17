@@ -2,7 +2,7 @@ plugins:
   - jemoji
   - jekyll-paginate
 repository: kimyyx/go-frontend-go
-theme: jekyll-theme-cayman
+theme: jekyll-theme-hacker
 title: Go frontend Go
 description: 资讯 & 知识点 & 面试题 for 前端
 github:
