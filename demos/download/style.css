@@ -1,7 +1,14 @@
 body {
   margin: 0;
-  font-family: "Microsoft Yahei";
+  font-family: 'Microsoft Yahei';
   background-color: #2ede95;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) {
+  .container {
+    transform-origin: top left;
+    transform: scale(0.5);
+  }
 }
 
 .container {
@@ -47,7 +54,7 @@ body {
   width: 690px;
   height: 100px;
   color: #fff;
-  background-image: url("./images/button.png");
+  background-image: url('./images/button.png');
   transform: translateX(-50%);
 }
 
