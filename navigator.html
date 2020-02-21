@@ -1,19 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Navigator</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Navigator</title>
-</head>
+  <body>
+    <h1 id="h1"></h1>
+  </body>
+  <script>
+    const H1Elm = document.getElementById('h1')
+    h1.innerText = navigator.userAgent
 
-<body>
-  <h1 id="h1"></h1>
-</body>
-<script>
-  const H1Elm = document.getElementById('h1')
-  h1.innerText = navigator.userAgent
-</script>
+    function browserCheck() {
+      var Sys = {}
+      var ua = navigator.userAgent.toLowerCase()
+      var s
 
+      if (ua.match(/rv:([\d.]+)/)) {
+        s = ua.match(/rv:([\d.]+)/)
+        Sys.ie = s[1]
+      } else if (ua.match(/msie ([\d.]+)/)) {
+        s = ua.match(/msie ([\d.]+)/)
+        Sys.ie = s[1]
+      } else if (ua.match(/trident\/([\d.]+)/)) {
+        s = ua.match(/trident\/([\d.]+)/)
+        Sys.ie = s[1]
+      } else if (ua.match(/firefox\/([\d.]+)/)) {
+        s = ua.match(/firefox\/([\d.]+)/)
+        Sys.firefox = s[1]
+      } else if (ua.match(/chrome\/([\d.]+)/)) {
+        s = ua.match(/chrome\/([\d.]+)/)
+        Sys.chrome = s[1]
+      } else if (ua.match(/opera.([\d.]+)/)) {
+        s = ua.match(/opera.([\d.]+)/)
+        Sys.opera = s[1]
+      } else if (ua.match(/version\/([\d.]+).*safari/)) {
+        s = ua.match(/version\/([\d.]+).*safari/)
+        Sys.safari = s[1]
+      }
+
+      /**
+       * macOS 上的 QQ 浏览器校验不能通过，其 ua 如下
+       * Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1.2 Safari/605.1.15 QQBrowserLite/1.2.9
+       * 所以先做一个粗糙的兼容
+       */
+      if (ua.indexOf('qqbrowserlite') > -1) {
+        Sys.chrome = '10.0.0.0'
+      }
+
+      // 以下进行测试
+
+      if (Sys.ie) {
+        Sys.name = 'IE'
+        Sys.version = Sys.ie
+      }
+      if (Sys.firefox) {
+        Sys.name = 'Firefox'
+        Sys.version = Sys.firefox
+      }
+      if (Sys.chrome) {
+        Sys.name = 'Chrome'
+        Sys.version = Sys.chrome
+      }
+      if (Sys.opera) {
+        Sys.name = 'Opera'
+        Sys.version = Sys.opera
+      }
+      if (Sys.safari) {
+        Sys.name = 'Safari'
+        Sys.version = Sys.safari
+      }
+      return Sys
+    }
+
+    function isBrowserOK() {
+      const browser = browserCheck()
+      if (
+        (browser.name === 'IE' || browser.name === 'Chrome') &&
+        browser.version.split('.')[0] >= 9
+      ) {
+        return '1'
+      } else {
+        return '0'
+      }
+    }
+
+    alert(isBrowserOK())
+  </script>
 </html>
