@@ -17,6 +17,7 @@
     function browserCheck() {
       var Sys = {}
       var ua = navigator.userAgent.toLowerCase()
+      alert(ua)
       var s
 
       if (ua.match(/rv:([\d.]+)/)) {
@@ -47,6 +48,7 @@
        * Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1.2 Safari/605.1.15 QQBrowserLite/1.2.9
        * 所以先做一个粗糙的兼容
        */
+      alert(ua.indexOf('qqbrowserlite'))
       if (ua.indexOf('qqbrowserlite') > -1) {
         Sys.chrome = '10.0.0.0'
       }
@@ -72,6 +74,9 @@
       if (Sys.safari) {
         Sys.name = 'Safari'
         Sys.version = Sys.safari
+      }
+      for (let key in Sys) {
+        alert(key + ': ' + Sys[key])
       }
       return Sys
     }
