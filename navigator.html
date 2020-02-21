@@ -51,7 +51,7 @@
        * 所以先做一个粗糙的兼容
        */
       if (ua.indexOf('qqbrowserlite') > -1) {
-        Sys.chrome = '10.0.0.0'
+        Sys = { chrome: '10.0.0.0' }
       }
 
       // 以下进行测试
